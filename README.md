@@ -23,7 +23,8 @@ deepfake_detection/
 
 1. Create a virtual environment.
 2. Install dependencies with `pip install -r requirements.txt`.
-3. Run `python train.py`.
+3. Point `TrainingConfig.data_dir` at your DFDC-style dataset.
+4. Run `python train.py`.
 
 ## Colab Workflow
 
@@ -36,6 +37,13 @@ Clone the repository in a notebook:
 ```
 
 Then import and reuse the training code from `src/`.
+
+## What Changed
+
+- Training and preprocessing logic now lives in `src/` instead of a large notebook.
+- The dataset is split at the video level before face extraction, which avoids train/validation leakage.
+- Face crops are taken from the original frame using MTCNN detection boxes rather than converting the detector tensor output directly.
+- Gradient accumulation now applies the final partial step instead of silently dropping it.
 
 ## Notes
 

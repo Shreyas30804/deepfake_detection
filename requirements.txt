@@ -1,7 +1,13 @@
-numpy>=1.26
+numpy>=1.26,<2.0
+scipy>=1.13
 pandas>=2.2
 scikit-learn>=1.5
+opencv-python>=4.10
+pillow>=10.4
 torch>=2.3
 torchvision>=0.18
-jupyter>=1.0
+albumentations>=1.4.10
+timm>=1.0
+facenet-pytorch>=2.6
 matplotlib>=3.9
+jupyter>=1.0
