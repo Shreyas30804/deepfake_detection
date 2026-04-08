@@ -34,6 +34,7 @@ Clone the repository in a notebook:
 !git clone https://github.com/Shreyas30804/deepfake_detection.git
 %cd deepfake_detection
 !pip install -r requirements-colab.txt
+!pip install facenet-pytorch==2.6.0 --no-deps
 ```
 
 Then import and reuse the training code from `src/`.
