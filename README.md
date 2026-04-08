@@ -33,10 +33,12 @@ Clone the repository in a notebook:
 ```python
 !git clone https://github.com/Shreyas30804/deepfake_detection.git
 %cd deepfake_detection
-!pip install -r requirements.txt
+!pip install -r requirements-colab.txt
 ```
 
 Then import and reuse the training code from `src/`.
+
+Use `requirements.txt` for a fresh local environment and `requirements-colab.txt` for Google Colab, since Colab already includes its own PyTorch and Pillow stack.
 
 ## What Changed
 
